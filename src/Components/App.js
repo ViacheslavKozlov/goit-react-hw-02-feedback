@@ -1,7 +1,12 @@
 import React from "react";
+import Feedback from "./feedback/Feedback";
 
 const App = () => {
-  return <></>;
+  return (
+    <>
+      <Feedback />
+    </>
+  );
 };
 
 export default App;
