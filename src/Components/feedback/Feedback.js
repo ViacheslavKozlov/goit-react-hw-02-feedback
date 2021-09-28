@@ -17,7 +17,7 @@ class Feedback extends Component {
     bad: 0
   };
 
-  changeStats = evt => {
+  onLeaveFeedback = evt => {
     const statName = evt.target.name;
     this.setState(prevState => ({ [statName]: prevState[statName] + 1 }));
   };
@@ -41,7 +41,7 @@ class Feedback extends Component {
     return (
       <>
         <Section title="Leave feedback">
-          <FeedbackOptions changeStats={this.changeStats} />
+          <FeedbackOptions options={["good", "neutral", "bad"]} onLeaveFeedback={this.onLeaveFeedback} />
         </Section>
         {!total ? (
           <Notification messege="No feedbacks yet" />
@@ -52,13 +52,13 @@ class Feedback extends Component {
         )}
         {/* <h2 className="headline">Please leave feedback</h2>
         <div className="btnWrapper">
-          <button type="button" name="good" onClick={this.changeStats}>
+          <button type="button" name="good" onClick={this.onLeaveFeedback}>
             Good
           </button>
-          <button type="button" name="neutral" onClick={this.changeStats}>
+          <button type="button" name="neutral" onClick={this.onLeaveFeedback}>
             Neutral
           </button>
-          <button type="button" name="bad" onClick={this.changeStats}>
+          <button type="button" name="bad" onClick={this.onLeaveFeedback}>
             Bad
           </button>
         </div>
