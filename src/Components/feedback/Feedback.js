@@ -50,34 +50,6 @@ class Feedback extends Component {
             <Statistcs good={this.state.good} neutral={this.state.neutral} bad={this.state.bad} total={total} rate={rate} />
           </Section>
         )}
-        {/* <h2 className="headline">Please leave feedback</h2>
-        <div className="btnWrapper">
-          <button type="button" name="good" onClick={this.onLeaveFeedback}>
-            Good
-          </button>
-          <button type="button" name="neutral" onClick={this.onLeaveFeedback}>
-            Neutral
-          </button>
-          <button type="button" name="bad" onClick={this.onLeaveFeedback}>
-            Bad
-          </button>
-        </div>
-        <div className="statsDataWrapper">
-          <p className="statItem">Good:</p> <span>{this.state.good}</span>
-          <p className="statItem">Neutral:</p> <span>{this.state.neutral}</span>
-          <p className="statItem">Bad:</p> <span>{this.state.bad}</span>
-        </div>
-
-        <div className="statsSummaryWrapper">
-          <p className="statItem">Total:</p> <span>{this.state.good + this.state.neutral + this.state.bad}</span>
-          <p className="statItem">Positive feedback rate:</p>{" "}
-          <span>
-            {Math.round(
-              ((this.state.good + this.state.neutral) / (this.state.good + this.state.neutral + this.state.bad)) * 100
-            )}
-          </span>
-          %<span />
-        </div> */}
       </>
     );
   }
